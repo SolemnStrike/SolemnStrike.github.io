@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Analizador Sintactico</title>
+    <meta name="generator" content="Serif WebPlus X8">
+    <meta name="viewport" content="width=960">
+    <link rel="stylesheet" type="text/css" href="wpscripts/wpstyles.css">
+    <style type="text/css">
+      .OBJ-1,.OBJ-1:link,.OBJ-1:visited { background-image:url('wpimages/wpe343abfb_06.png');background-repeat:no-repeat;background-position:0px 0px;text-decoration:none;display:block;position:absolute; }
+      .OBJ-1:hover { background-position:0px -76px; }
+      .OBJ-1:active,a:link.OBJ-1.Activated,a:link.OBJ-1.Down,a:visited.OBJ-1.Activated,a:visited.OBJ-1.Down,.OBJ-1.Activated,.OBJ-1.Down { background-position:0px -38px; }
+      .OBJ-1:focus { outline-style:none; }
+      button.OBJ-1 { background-color:transparent;border:none 0px;padding:0;display:inline-block;cursor:pointer; }
+      button.OBJ-1:disabled { pointer-events:none; }
+      .OBJ-1.Inline { display:inline-block;position:relative;line-height:normal; }
+      .OBJ-1 span,.OBJ-1:link span,.OBJ-1:visited span { color:#666666;font-family:Tahoma,sans-serif;font-weight:normal;text-decoration:none;text-align:center;text-transform:none;font-style:normal;left:3px;top:11px;width:135px;height:16px;line-height:16px;font-size:13px;display:block;position:absolute;cursor:pointer; }
+      .OBJ-1:hover span { color:#333333; }
+      .OBJ-1.Disabled span,a:link.OBJ-1.Disabled span,a:visited.OBJ-1.Disabled span,a:hover.OBJ-1.Disabled span,a:active.OBJ-1.Disabled span { color:#cccccc; }
+      .OBJ-2 { line-height:38px; }
+      .OBJ-3,.OBJ-3:link,.OBJ-3:visited { background-image:url('wpimages/wpaa7c0b8b_06.png');background-repeat:no-repeat;background-position:0px 0px;text-decoration:none;display:block;position:absolute; }
+      .OBJ-3:hover { background-position:0px -76px; }
+      .OBJ-3:active,a:link.OBJ-3.Activated,a:link.OBJ-3.Down,a:visited.OBJ-3.Activated,a:visited.OBJ-3.Down,.OBJ-3.Activated,.OBJ-3.Down { background-position:0px -38px; }
+      .OBJ-3:focus { outline-style:none; }
+      button.OBJ-3 { background-color:transparent;border:none 0px;padding:0;display:inline-block;cursor:pointer; }
+      button.OBJ-3:disabled { pointer-events:none; }
+      .OBJ-3.Inline { display:inline-block;position:relative;line-height:normal; }
+      .OBJ-3 span,.OBJ-3:link span,.OBJ-3:visited span { color:#666666;font-family:Tahoma,sans-serif;font-weight:normal;text-decoration:none;text-align:center;text-transform:none;font-style:normal;left:3px;top:11px;width:135px;height:16px;line-height:16px;font-size:13px;display:block;position:absolute;cursor:pointer; }
+      .OBJ-3:hover span { color:#333333; }
+      .OBJ-3.Disabled span,a:link.OBJ-3.Disabled span,a:visited.OBJ-3.Disabled span,a:hover.OBJ-3.Disabled span,a:active.OBJ-3.Disabled span { color:#cccccc; }
+      .OBJ-4,.OBJ-4:link,.OBJ-4:visited { background-image:url('wpimages/wp4e679835_06.png');background-repeat:no-repeat;background-position:0px 0px;text-decoration:none;display:block;position:absolute; }
+      .OBJ-4:hover { background-position:0px -76px; }
+      .OBJ-4:active,a:link.OBJ-4.Activated,a:link.OBJ-4.Down,a:visited.OBJ-4.Activated,a:visited.OBJ-4.Down,.OBJ-4.Activated,.OBJ-4.Down { background-position:0px -38px; }
+      .OBJ-4:focus { outline-style:none; }
+      button.OBJ-4 { background-color:transparent;border:none 0px;padding:0;display:inline-block;cursor:pointer; }
+      button.OBJ-4:disabled { pointer-events:none; }
+      .OBJ-4.Inline { display:inline-block;position:relative;line-height:normal; }
+      .OBJ-4 span,.OBJ-4:link span,.OBJ-4:visited span { color:#666666;font-family:Tahoma,sans-serif;font-weight:normal;text-decoration:none;text-align:center;text-transform:none;font-style:normal;left:3px;top:11px;width:135px;height:16px;line-height:16px;font-size:13px;display:block;position:absolute;cursor:pointer; }
+      .OBJ-4:hover span { color:#333333; }
+      .OBJ-4.Disabled span,a:link.OBJ-4.Disabled span,a:visited.OBJ-4.Disabled span,a:hover.OBJ-4.Disabled span,a:active.OBJ-4.Disabled span { color:#cccccc; }
+      @font-face { font-family: 'Celestia Redux'; src: url('wpscripts/wp5c2ab190.ttf'); }
+      .P-1 { text-align:justify;line-height:1px;font-family:"Celestia Redux", serif;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;font-variant:normal;font-size:32.0px;vertical-align:0; }
+      .C-1 { line-height:42.00px;font-family:"Celestia Redux", serif;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;text-decoration:none;font-variant:normal;font-size:32.0px;vertical-align:0; }
+      .P-2 { text-align:justify;line-height:1px;font-family:"Celestia Redux", serif;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;font-variant:normal;font-size:27.0px;vertical-align:0; }
+      .C-2 { line-height:36.00px;font-family:"Celestia Redux", serif;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;text-decoration:none;font-variant:normal;font-size:26.7px;vertical-align:0; }
+    </style>
+    <script type="text/javascript" src="wpscripts/jquery.js"></script>
+    <script type="text/javascript" src="wpscripts/jquery.timers.js"></script>
+    <script type="text/javascript" src="wpscripts/jquery.wpgallery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      
+$('#wp_gallery_pg_8').wpgallery({
+      	imageArray: wp_imgArray_pg_8,
+      	nTotalImages: nImgNum_pg_8,
+      	nGalleryLeft: 134,
+      	nGalleryTop: 1177,
+      	nGalleryWidth: 691,
+      	nGalleryHeight: 546,
+      	nImageDivLeft: 0,
+      	nImageDivTop: 0,
+      	nImageDivWidth: 691,
+      	nImageDivHeight: 546,
+      	nControlBarStyle: 0,
+      	nControlBarExternalTop: 496,
+      	bNavBarOnTop: true,
+      	bShowNavBar: false,
+      	nNavBarAlignment: 0,
+      	strNavBarColour: 'none',
+      	nNavBarOpacity: 1.0,
+      	nNavBarIconWidth: 24,
+      	nNavBarIconHeight: 24,
+      	bShowCaption: false,
+      	bCaptionCount: true,
+      	strCaptionColour: '#ffffff',
+      	nCaptionOpacity: 1.0,
+      	strCaptionTextColour: '#000000',
+      	nCaptionFontSize: 12,
+      	strCaptionFontType: 'Arial,Times New Roman,_sans',
+      	strCaptionAlign: 'center',
+      	strCaptionFontWeight: 'normal',
+      	bShowThumbnails: true,
+      	nThumbStyle: 3,
+      	nThumbPosition: 0,
+      	nThumbLeft: 30,
+      	nThumbTop: 441,
+      	nThumbOpacity: 0.5,
+      	nTotalThumbs: 2,
+      	nThumbSize: 40,
+      	nThumbSpacing: 10,
+      	bThumbBorder: true,
+      	strThumbBorderColour: '#000000',
+      	strThumbBorderHoverColour: '#ffffff',
+      	strThumbBorderActiveColour: '#ffffff',
+      	bShowThumbnailArrows: true,
+      	nThumbButtonSize: 24,
+      	nThumbButtonIndent: 30,
+      	nColBorderWidth: 2,
+      	nTransitionStyle: 1,
+      	nStaticTime: 2000,
+      	nTransitTime: 500,
+      	bAutoplay: false,
+      	loadingButtonSize: 38,
+      	bPageCentred: true,
+      	nPageWidth: 960,
+      	nZIndex: 100,
+      	loadingButtonSrc: 'wpimages/wpgallery_loading_0.gif',
+      	blankSrc: 'wpscripts/blank.gif',
+      	rewindButtonSrc: 'wpimages/wpgallery_rewind_6.png',
+      	prevButtonSrc: 'wpimages/wpgallery_previous_6.png',
+      	playButtonSrc: 'wpimages/wpgallery_play_6.png',
+      	pauseButtonSrc: 'wpimages/wpgallery_pause_6.png',
+      	nextButtonSrc: 'wpimages/wpgallery_next_6.png',
+      	forwardButtonSrc: 'wpimages/wpgallery_forward_6.png',
+      	thumbRewindButtonSrc: 'wpimages/wpgallery_rewind_6.png',
+      	thumbForwardButtonSrc: 'wpimages/wpgallery_forward_6.png',
+      	rewindoverButtonSrc: 'wpimages/wpgallery_rewind_over_6.png',
+      	prevoverButtonSrc: 'wpimages/wpgallery_previous_over_6.png',
+      	playoverButtonSrc: 'wpimages/wpgallery_play_over_6.png',
+      	pauseoverButtonSrc: 'wpimages/wpgallery_pause_over_6.png',
+      	nextoverButtonSrc: 'wpimages/wpgallery_next_over_6.png',
+      	forwardoverButtonSrc: 'wpimages/wpgallery_forward_over_6.png',
+      	thumboverRewindButtonSrc: 'wpimages/wpgallery_rewind_over_6.png',
+      	thumboverForwardButtonSrc: 'wpimages/wpgallery_forward_over_6.png',
+      	strRewindToolTip: 'Reverse',
+      	strPreviousToolTip: 'Previous',
+      	strPlayToolTip: 'Play',
+      	strPauseToolTip: 'Pause',
+      	strNextToolTip: 'Next',
+      	strForwardToolTip: 'Forward',
+      	strThumbRewindToolTip: 'Reverse',
+      	strThumbForwardToolTip: 'Forward'
+      });
+      $("a.ActiveButton").bind({ mousedown:function(){if ( $(this).attr('disabled') === undefined ) $(this).addClass('Activated');}, mouseleave:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}, mouseup:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}});
+      });
+      var nImgNum_pg_8 = 0;
+      wp_imgArray_pg_8 = new Array();
+      wp_imgArray_pg_8[nImgNum_pg_8++] = new wp_galleryimage("wpimages/3e942a1a5d79.jpg", 410, 546, "wpimages/3e942a1a5d79t.jpg", "");
+      wp_imgArray_pg_8[nImgNum_pg_8++] = new wp_galleryimage("wpimages/c0d2e3e2132f.jpg", 410, 546, "wpimages/c0d2e3e2132ft.jpg", "");
+    </script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  </head>
+  <body style="height:1994px;background:#cdcdcd url('wpimages/wp797318e3_06.jpg') repeat-x scroll center top;background-size:auto;">
+    <div id="divMain" style="background:transparent;margin-left:auto;margin-right:auto;position:relative;width:960px;height:1994px;">
+      <div style="position:absolute;left:-20px;top:207px;width:960px;height:86px;">
+        <a href="index.html" id="nav_34_B1" class="OBJ-1 ActiveButton OBJ-2" style="display:block;position:absolute;left:130px;top:0px;width:140px;height:38px;">
+          <span>Inicio</span>
+        </a>
+        <a href="al.html" id="nav_34_B2" class="OBJ-3 ActiveButton OBJ-2" style="display:block;position:absolute;left:270px;top:0px;width:140px;height:38px;">
+          <span>Analizador&nbsp;Lexico</span>
+        </a>
+        <a href="as.html" id="nav_34_B3" class="OBJ-3 ActiveButton Down OBJ-2" style="display:block;position:absolute;left:410px;top:0px;width:140px;height:38px;">
+          <span>Analizador&nbsp;Sintactico</span>
+        </a>
+        <a href="ase.html" id="nav_34_B4" class="OBJ-3 ActiveButton OBJ-2" style="display:block;position:absolute;left:550px;top:0px;width:140px;height:38px;">
+          <span>Analizador&nbsp;Semantico</span>
+        </a>
+        <a href="page5.html" id="nav_34_B5" class="OBJ-4 ActiveButton OBJ-2" style="display:block;position:absolute;left:690px;top:0px;width:140px;height:38px;">
+          <span>Generador&nbsp;de&nbsp;Código</span>
+        </a>
+      </div>
+      <img alt="Compiladores" src="wpimages/wpe4e96637_06.png" style="position:absolute;left:214px;top:29px;width:494px;height:116px;">
+      <img src="wpimages/wpae5bc02e_06.png" alt="" width="576" height="68" style="position:absolute;left:192px;top:296px;width:576px;height:68px;">
+      <img alt="" src="wpimages/wpb8a94118_06.png" style="position:absolute;left:0px;top:404px;width:960px;height:237px;">
+      <div style="position:absolute;left:13px;top:409px;width:933px;height:227px;overflow:hidden;">
+        <p class="Slider-Heading P-1"><span class="C-1">La segunda fase del compilador es el análisis sintáctico o parsing. El analizador utiliza los primeros componentes de los tokens producidos por el analizador léxico para crear una representación intermedia en forma de árbol que describa la estructura gramática del flujo de tokens.</span></p>
+      </div>
+      <img alt="" src="wpimages/wp5ac80255_06.png" style="position:absolute;left:0px;top:852px;width:960px;height:136px;">
+      <div style="position:absolute;left:13px;top:873px;width:933px;height:93px;overflow:hidden;">
+        <p class="Slider-Heading P-2"><span class="C-2">Una gramática libre de contexto es una descripción estructural precisa de un lenguaje.</span></p>
+      </div>
+      <img src="wpimages/wp5d9812c9_06.png" alt="" width="656" height="68" style="position:absolute;left:0px;top:758px;width:656px;height:68px;">
+      <div id="pg_8" style="position:absolute;left:134px;top:1177px;width:691px;height:546px;"><div id="wp_gallery_pg_8"></div></div>
+      <img src="wpimages/wpc82cf769_06.png" alt="" width="811" height="68" style="position:absolute;left:0px;top:1058px;width:811px;height:68px;">
+      <img alt="" src="wpimages/wp9b34e66b_06.png" style="position:absolute;left:135px;top:1163px;width:687px;height:577px;">
+    </div>
+  </body>
+</html>
