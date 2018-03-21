@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Analizador Semantico</title>
+    <title>Generador de Código</title>
     <meta name="generator" content="Serif WebPlus X8">
     <meta name="viewport" content="width=960">
     <link rel="stylesheet" type="text/css" href="wpscripts/wpstyles.css">
@@ -38,110 +38,21 @@
       .OBJ-4 span,.OBJ-4:link span,.OBJ-4:visited span { color:#666666;font-family:Tahoma,sans-serif;font-weight:normal;text-decoration:none;text-align:center;text-transform:none;font-style:normal;left:3px;top:11px;width:135px;height:16px;line-height:16px;font-size:13px;display:block;position:absolute;cursor:pointer; }
       .OBJ-4:hover span { color:#333333; }
       .OBJ-4.Disabled span,a:link.OBJ-4.Disabled span,a:visited.OBJ-4.Disabled span,a:hover.OBJ-4.Disabled span,a:active.OBJ-4.Disabled span { color:#cccccc; }
-      .OBJ-5 { visibility:hidden; }
       @font-face { font-family: 'Celestia Redux'; src: url('wpscripts/wp5c2ab190.ttf'); }
       .P-1 { text-align:justify;line-height:1px;font-family:"Celestia Redux", serif;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;font-variant:normal;font-size:27.0px;vertical-align:0; }
       .C-1 { line-height:36.00px;font-family:"Celestia Redux", serif;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;text-decoration:none;font-variant:normal;font-size:26.7px;vertical-align:0; }
     </style>
     <script type="text/javascript" src="wpscripts/jquery.js"></script>
-    <script type="text/javascript" src="wpscripts/jquery.timers.js"></script>
-    <script type="text/javascript" src="wpscripts/jquery.wpgallery.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-      
-$('#wp_gallery_pg_10').wpgallery({
-      	imageArray: wp_imgArray_pg_10,
-      	nTotalImages: nImgNum_pg_10,
-      	nGalleryLeft: 213,
-      	nGalleryTop: 1041,
-      	nGalleryWidth: 533,
-      	nGalleryHeight: 421,
-      	nImageDivLeft: 0,
-      	nImageDivTop: 0,
-      	nImageDivWidth: 533,
-      	nImageDivHeight: 421,
-      	nControlBarStyle: 0,
-      	nControlBarExternalTop: 371,
-      	bNavBarOnTop: true,
-      	bShowNavBar: false,
-      	nNavBarAlignment: 0,
-      	strNavBarColour: 'none',
-      	nNavBarOpacity: 1.0,
-      	nNavBarIconWidth: 24,
-      	nNavBarIconHeight: 24,
-      	bShowCaption: false,
-      	bCaptionCount: true,
-      	strCaptionColour: '#ffffff',
-      	nCaptionOpacity: 1.0,
-      	strCaptionTextColour: '#000000',
-      	nCaptionFontSize: 12,
-      	strCaptionFontType: 'Arial,Times New Roman,_sans',
-      	strCaptionAlign: 'center',
-      	strCaptionFontWeight: 'normal',
-      	bShowThumbnails: true,
-      	nThumbStyle: 1,
-      	nThumbPosition: 0,
-      	nThumbLeft: 30,
-      	nThumbTop: 316,
-      	nThumbOpacity: 0.5,
-      	nTotalThumbs: 2,
-      	nThumbSize: 40,
-      	nThumbSpacing: 10,
-      	bThumbBorder: true,
-      	strThumbBorderColour: '#000000',
-      	strThumbBorderHoverColour: '#ffffff',
-      	strThumbBorderActiveColour: '#ffffff',
-      	bShowThumbnailArrows: true,
-      	nThumbButtonSize: 24,
-      	nThumbButtonIndent: 30,
-      	nColBorderWidth: 2,
-      	nTransitionStyle: 1,
-      	nStaticTime: 2000,
-      	nTransitTime: 500,
-      	bAutoplay: false,
-      	loadingButtonSize: 38,
-      	bPageCentred: true,
-      	nPageWidth: 960,
-      	nZIndex: 100,
-      	loadingButtonSrc: 'wpimages/wpgallery_loading_0.gif',
-      	blankSrc: 'wpscripts/blank.gif',
-      	rewindButtonSrc: 'wpimages/wpgallery_rewind_6.png',
-      	prevButtonSrc: 'wpimages/wpgallery_previous_6.png',
-      	playButtonSrc: 'wpimages/wpgallery_play_6.png',
-      	pauseButtonSrc: 'wpimages/wpgallery_pause_6.png',
-      	nextButtonSrc: 'wpimages/wpgallery_next_6.png',
-      	forwardButtonSrc: 'wpimages/wpgallery_forward_6.png',
-      	thumbRewindButtonSrc: 'wpimages/wpgallery_rewind_6.png',
-      	thumbForwardButtonSrc: 'wpimages/wpgallery_forward_6.png',
-      	rewindoverButtonSrc: 'wpimages/wpgallery_rewind_over_6.png',
-      	prevoverButtonSrc: 'wpimages/wpgallery_previous_over_6.png',
-      	playoverButtonSrc: 'wpimages/wpgallery_play_over_6.png',
-      	pauseoverButtonSrc: 'wpimages/wpgallery_pause_over_6.png',
-      	nextoverButtonSrc: 'wpimages/wpgallery_next_over_6.png',
-      	forwardoverButtonSrc: 'wpimages/wpgallery_forward_over_6.png',
-      	thumboverRewindButtonSrc: 'wpimages/wpgallery_rewind_over_6.png',
-      	thumboverForwardButtonSrc: 'wpimages/wpgallery_forward_over_6.png',
-      	strRewindToolTip: 'Reverse',
-      	strPreviousToolTip: 'Previous',
-      	strPlayToolTip: 'Play',
-      	strPauseToolTip: 'Pause',
-      	strNextToolTip: 'Next',
-      	strForwardToolTip: 'Forward',
-      	strThumbRewindToolTip: 'Reverse',
-      	strThumbForwardToolTip: 'Forward'
-      });
       $("a.ActiveButton").bind({ mousedown:function(){if ( $(this).attr('disabled') === undefined ) $(this).addClass('Activated');}, mouseleave:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}, mouseup:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}});
       });
-      var nImgNum_pg_10 = 0;
-      wp_imgArray_pg_10 = new Array();
-      wp_imgArray_pg_10[nImgNum_pg_10++] = new wp_galleryimage("wpimages/2556528621ed.jpg", 533, 409, "wpimages/2556528621edt.jpg", "");
-      wp_imgArray_pg_10[nImgNum_pg_10++] = new wp_galleryimage("wpimages/ff93e0e3a419.jpg", 533, 308, "wpimages/ff93e0e3a419t.jpg", "");
     </script>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   </head>
-  <body style="height:1539px;background:#cdcdcd url('wpimages/wp797318e3_06.jpg') repeat-x scroll center top;background-size:auto;">
-    <div id="divMain" style="background:transparent;margin-left:auto;margin-right:auto;position:relative;width:960px;height:1539px;">
+  <body style="height:1628px;background:#cdcdcd url('wpimages/wp797318e3_06.jpg') repeat-x scroll center top;background-size:auto;">
+    <div id="divMain" style="background:transparent;margin-left:auto;margin-right:auto;position:relative;width:960px;height:1628px;">
       <div style="position:absolute;left:-20px;top:207px;width:960px;height:86px;">
         <a href="index.html" id="nav_34_B1" class="OBJ-1 ActiveButton OBJ-2" style="display:block;position:absolute;left:130px;top:0px;width:140px;height:38px;">
           <span>Inicio</span>
@@ -152,28 +63,27 @@ $('#wp_gallery_pg_10').wpgallery({
         <a href="as.html" id="nav_34_B3" class="OBJ-3 ActiveButton OBJ-2" style="display:block;position:absolute;left:410px;top:0px;width:140px;height:38px;">
           <span>Analizador&nbsp;Sintactico</span>
         </a>
-        <a href="ase.html" id="nav_34_B4" class="OBJ-3 ActiveButton Down OBJ-2" style="display:block;position:absolute;left:550px;top:0px;width:140px;height:38px;">
+        <a href="ase.html" id="nav_34_B4" class="OBJ-3 ActiveButton OBJ-2" style="display:block;position:absolute;left:550px;top:0px;width:140px;height:38px;">
           <span>Analizador&nbsp;Semantico</span>
         </a>
-        <a href="generador.html" id="nav_34_B5" class="OBJ-4 ActiveButton OBJ-2" style="display:block;position:absolute;left:690px;top:0px;width:140px;height:38px;">
+        <a href="generador.html" id="nav_34_B5" class="OBJ-4 ActiveButton Down OBJ-2" style="display:block;position:absolute;left:690px;top:0px;width:140px;height:38px;">
           <span>Generador&nbsp;de&nbsp;Código</span>
         </a>
       </div>
       <img alt="Compiladores" src="wpimages/wpe4e96637_06.png" style="position:absolute;left:214px;top:29px;width:494px;height:116px;">
-      <img alt="" src="wpimages/wpfc967d6f_06.png" id="pic_25" class="OBJ-5" style="position:absolute;left:0px;top:442px;width:218px;height:277px;">
-      <img src="wpimages/wp2e174215_06.png" alt="" width="576" height="68" style="position:absolute;left:192px;top:296px;width:576px;height:68px;">
-      <img alt="" src="wpimages/wpe16f1834_06.png" style="position:absolute;left:0px;top:384px;width:960px;height:198px;">
-      <div style="position:absolute;left:13px;top:389px;width:933px;height:192px;overflow:hidden;">
-        <p class="Slider-Heading P-1"><span class="C-1">En un lenguaje típico, el análisis semántico involucra la construcción de una tabla de símbolos para mantenerse al tanto de los significados de nombres establecidos en declaraciones e identificar tipos y verificarlos en expresiones y sentencias con el fin de determinar su exactitud dentro de las reglas de tipos de lenguaje.</span></p>
+      <img src="wpimages/wp4302badb_06.png" alt="" width="601" height="68" style="position:absolute;left:176px;top:285px;width:601px;height:68px;">
+      <img alt="" src="wpimages/wp7a1e9b08_06.png" style="position:absolute;left:0px;top:382px;width:960px;height:487px;">
+      <div style="position:absolute;left:13px;top:393px;width:933px;height:477px;overflow:hidden;">
+        <p class="Slider-Heading P-1"><span class="C-1">En ciencias de la computación, el código de tres direcciones es un lenguaje intermedio usado por compiladores optimizadores para ayudar en las transformaciones de mejora de código. Cada instrucción TAC tiene a lo sumo tres operandos y es típicamente una combinación de asignación y operador binario.</span></p>
+        <p class="Slider-Heading P-1"><span class="C-1"><br></span></p>
+        <p class="Slider-Heading P-1"><span class="C-1">Ya que el código de tres direcciones es usado como un lenguaje intermedio en los compiladores, los operandos normalmente no contendrán direcciones de memoria o registros concretos, sino que direcciones simbólicas que serán convertidas en direcciones reales durante la asignación de registros. Es también común que los nombres de los operandos sean numerados secuencialmente ya que el código de tres direcciones es típicamente generado por el compilador.</span></p>
       </div>
-      <img alt="" src="wpimages/wpd0b17a40_06.png" style="position:absolute;left:0px;top:717px;width:960px;height:166px;">
-      <div style="position:absolute;left:13px;top:717px;width:933px;height:166px;overflow:hidden;">
-        <p class="Slider-Heading P-1"><span class="C-1">Una de las tareas principales de un compilador es el calculo y mantenimiento de la información de tipos de datos (Inferencia de tipos), y el uso de tal información para asegurar que cada parte de un programa tenga sentido bajo las reglas de tipo de lenguaje.</span></p>
+      <img alt="" src="wpimages/wpc4a1e186_06.png" style="position:absolute;left:0px;top:1341px;width:960px;height:207px;">
+      <div style="position:absolute;left:13px;top:1341px;width:933px;height:187px;overflow:hidden;">
+        <p class="Slider-Heading P-1"><span class="C-1">Un analizador léxico o analizador lexicográfico es la primera fase de un compilador, consistente en un programa que recibe como entrada el código fuente de otro programa y produce una salida compuesta de tokens (componentes léxicos) o símbolos. Estos tokens sirven para una posterior etapa del proceso de traducción, siendo la entrada para el analizador sintáctico.</span></p>
       </div>
-      <img src="wpimages/wp5b110c5f_06.png" alt="" width="482" height="73" style="position:absolute;left:0px;top:628px;width:482px;height:73px;">
-      <img src="wpimages/wp552f4d23_06.png" alt="" width="388" height="68" style="position:absolute;left:290px;top:933px;width:388px;height:68px;">
-      <img alt="" src="wpimages/wp5f0da123_06.png" style="position:absolute;left:170px;top:1027px;width:636px;height:512px;">
-      <div id="pg_10" style="position:absolute;left:213px;top:1041px;width:533px;height:421px;"><div id="wp_gallery_pg_10"></div></div>
+      <img src="wpimages/wp0a54dd68_06.png" alt="" width="182" height="68" style="position:absolute;left:0px;top:919px;width:182px;height:68px;">
+      <img alt="" src="wpimages/wpcc8999fd_06.png" style="position:absolute;left:0px;top:1001px;width:960px;height:202px;">
     </div>
   </body>
 </html>

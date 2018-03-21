@@ -41,18 +41,114 @@
       @font-face { font-family: 'Celestia Redux'; src: url('wpscripts/wp5c2ab190.ttf'); }
       .P-1 { text-align:justify;line-height:1px;font-family:"Celestia Redux", serif;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;font-variant:normal;font-size:27.0px;vertical-align:0; }
       .C-1 { line-height:36.00px;font-family:"Celestia Redux", serif;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;text-decoration:none;font-variant:normal;font-size:26.7px;vertical-align:0; }
+      .P-2 { text-align:justify;margin-left:48.0px;text-indent:-15.0px;line-height:1px;font-family:"Celestia Redux", serif;font-style:normal;font-weight:normal;color:#ffffff;background-color:transparent;font-variant:normal;font-size:27.0px;vertical-align:0; }
+      .C-2 { line-height:36.00px;font-family:"Celestia Redux", serif;font-style:normal;font-weight:normal;color:#5cbcfc;background-color:transparent;text-decoration:none;font-variant:normal;font-size:26.7px;vertical-align:0; }
+      .P-3 { text-align:justify;line-height:1px;font-family:"Celestia Redux", serif;font-style:normal;font-weight:normal;color:#ff4040;background-color:transparent;font-variant:normal;font-size:27.0px;vertical-align:0; }
+      .C-3 { line-height:36.00px;font-family:"Celestia Redux", serif;font-style:normal;font-weight:normal;color:#ff4040;background-color:transparent;text-decoration:none;font-variant:normal;font-size:26.7px;vertical-align:0; }
+      .C-4 { line-height:53.00px;font-family:"Celestia Redux", serif;font-style:normal;font-weight:normal;color:#ff4040;background-color:transparent;text-decoration:none;font-variant:normal;font-size:40.0px;vertical-align:0; }
+      .C-5 { line-height:53.00px;font-family:"Celestia Redux", serif;font-style:normal;font-weight:normal;color:#5cbcfc;background-color:transparent;text-decoration:none;font-variant:normal;font-size:40.0px;vertical-align:0; }
+      .C-6 { line-height:15.00px;font-family:"Comic Sans MS", cursive;font-style:normal;font-weight:normal;color:#000000;background-color:transparent;text-decoration:none;font-variant:normal;font-size:11.3px;vertical-align:0; }
     </style>
     <script type="text/javascript" src="wpscripts/jquery.js"></script>
+    <script type="text/javascript" src="wpscripts/jquery.timers.js"></script>
+    <script type="text/javascript" src="wpscripts/jquery.wpgallery.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
+      
+$('#wp_gallery_pg_9').wpgallery({
+      	imageArray: wp_imgArray_pg_9,
+      	nTotalImages: nImgNum_pg_9,
+      	nGalleryLeft: 191,
+      	nGalleryTop: 1889,
+      	nGalleryWidth: 577,
+      	nGalleryHeight: 456,
+      	nImageDivLeft: 0,
+      	nImageDivTop: 0,
+      	nImageDivWidth: 577,
+      	nImageDivHeight: 456,
+      	nControlBarStyle: 0,
+      	nControlBarExternalTop: 406,
+      	bNavBarOnTop: true,
+      	bShowNavBar: false,
+      	nNavBarAlignment: 0,
+      	strNavBarColour: 'none',
+      	nNavBarOpacity: 1.0,
+      	nNavBarIconWidth: 24,
+      	nNavBarIconHeight: 24,
+      	bShowCaption: false,
+      	bCaptionCount: true,
+      	strCaptionColour: '#ffffff',
+      	nCaptionOpacity: 1.0,
+      	strCaptionTextColour: '#000000',
+      	nCaptionFontSize: 12,
+      	strCaptionFontType: 'Arial,Times New Roman,_sans',
+      	strCaptionAlign: 'center',
+      	strCaptionFontWeight: 'normal',
+      	bShowThumbnails: true,
+      	nThumbStyle: 1,
+      	nThumbPosition: 0,
+      	nThumbLeft: 30,
+      	nThumbTop: 351,
+      	nThumbOpacity: 0.5,
+      	nTotalThumbs: 3,
+      	nThumbSize: 40,
+      	nThumbSpacing: 10,
+      	bThumbBorder: true,
+      	strThumbBorderColour: '#000000',
+      	strThumbBorderHoverColour: '#ffffff',
+      	strThumbBorderActiveColour: '#ffffff',
+      	bShowThumbnailArrows: true,
+      	nThumbButtonSize: 24,
+      	nThumbButtonIndent: 30,
+      	nColBorderWidth: 2,
+      	nTransitionStyle: 1,
+      	nStaticTime: 2000,
+      	nTransitTime: 500,
+      	bAutoplay: false,
+      	loadingButtonSize: 38,
+      	bPageCentred: true,
+      	nPageWidth: 960,
+      	nZIndex: 100,
+      	loadingButtonSrc: 'wpimages/wpgallery_loading_0.gif',
+      	blankSrc: 'wpscripts/blank.gif',
+      	rewindButtonSrc: 'wpimages/wpgallery_rewind_6.png',
+      	prevButtonSrc: 'wpimages/wpgallery_previous_6.png',
+      	playButtonSrc: 'wpimages/wpgallery_play_6.png',
+      	pauseButtonSrc: 'wpimages/wpgallery_pause_6.png',
+      	nextButtonSrc: 'wpimages/wpgallery_next_6.png',
+      	forwardButtonSrc: 'wpimages/wpgallery_forward_6.png',
+      	thumbRewindButtonSrc: 'wpimages/wpgallery_rewind_6.png',
+      	thumbForwardButtonSrc: 'wpimages/wpgallery_forward_6.png',
+      	rewindoverButtonSrc: 'wpimages/wpgallery_rewind_over_6.png',
+      	prevoverButtonSrc: 'wpimages/wpgallery_previous_over_6.png',
+      	playoverButtonSrc: 'wpimages/wpgallery_play_over_6.png',
+      	pauseoverButtonSrc: 'wpimages/wpgallery_pause_over_6.png',
+      	nextoverButtonSrc: 'wpimages/wpgallery_next_over_6.png',
+      	forwardoverButtonSrc: 'wpimages/wpgallery_forward_over_6.png',
+      	thumboverRewindButtonSrc: 'wpimages/wpgallery_rewind_over_6.png',
+      	thumboverForwardButtonSrc: 'wpimages/wpgallery_forward_over_6.png',
+      	strRewindToolTip: 'Reverse',
+      	strPreviousToolTip: 'Previous',
+      	strPlayToolTip: 'Play',
+      	strPauseToolTip: 'Pause',
+      	strNextToolTip: 'Next',
+      	strForwardToolTip: 'Forward',
+      	strThumbRewindToolTip: 'Reverse',
+      	strThumbForwardToolTip: 'Forward'
+      });
       $("a.ActiveButton").bind({ mousedown:function(){if ( $(this).attr('disabled') === undefined ) $(this).addClass('Activated');}, mouseleave:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}, mouseup:function(){ if ( $(this).attr('disabled') === undefined ) $(this).removeClass('Activated');}});
       });
+      var nImgNum_pg_9 = 0;
+      wp_imgArray_pg_9 = new Array();
+      wp_imgArray_pg_9[nImgNum_pg_9++] = new wp_galleryimage("wpimages/d8293ce72c67.jpg", 342, 456, "wpimages/d8293ce72c67t.jpg", "");
+      wp_imgArray_pg_9[nImgNum_pg_9++] = new wp_galleryimage("wpimages/e50a7d7c3b55.jpg", 342, 456, "wpimages/e50a7d7c3b55t.jpg", "");
+      wp_imgArray_pg_9[nImgNum_pg_9++] = new wp_galleryimage("wpimages/ae59c18e9bca.jpg", 427, 456, "wpimages/ae59c18e9bcat.jpg", "");
     </script>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   </head>
-  <body style="height:1516px;background:#cdcdcd url('wpimages/wp797318e3_06.jpg') repeat-x scroll center top;background-size:auto;">
-    <div id="divMain" style="background:transparent;margin-left:auto;margin-right:auto;position:relative;width:960px;height:1516px;">
+  <body style="height:2415px;background:#cdcdcd url('wpimages/wp797318e3_06.jpg') repeat-x scroll center top;background-size:auto;">
+    <div id="divMain" style="background:transparent;margin-left:auto;margin-right:auto;position:relative;width:960px;height:2415px;">
       <div style="position:absolute;left:-20px;top:207px;width:960px;height:86px;">
         <a href="index.html" id="nav_34_B1" class="OBJ-1 ActiveButton OBJ-2" style="display:block;position:absolute;left:130px;top:0px;width:140px;height:38px;">
           <span>Inicio</span>
@@ -66,16 +162,40 @@
         <a href="ase.html" id="nav_34_B4" class="OBJ-3 ActiveButton OBJ-2" style="display:block;position:absolute;left:550px;top:0px;width:140px;height:38px;">
           <span>Analizador&nbsp;Semantico</span>
         </a>
-        <a href="page5.html" id="nav_34_B5" class="OBJ-4 ActiveButton OBJ-2" style="display:block;position:absolute;left:690px;top:0px;width:140px;height:38px;">
+        <a href="generador.html" id="nav_34_B5" class="OBJ-4 ActiveButton OBJ-2" style="display:block;position:absolute;left:690px;top:0px;width:140px;height:38px;">
           <span>Generador&nbsp;de&nbsp;Código</span>
         </a>
       </div>
       <img alt="Compiladores" src="wpimages/wpe4e96637_06.png" style="position:absolute;left:214px;top:29px;width:494px;height:116px;">
-      <img src="wpimages/wp9fd5b981_06.png" alt="" width="576" height="68" style="position:absolute;left:192px;top:296px;width:576px;height:68px;">
+      <img src="wpimages/wp640d5e53_06.png" alt="" width="576" height="68" style="position:absolute;left:192px;top:296px;width:576px;height:68px;">
       <img alt="" src="wpimages/wpc4a1e186_06.png" style="position:absolute;left:0px;top:391px;width:960px;height:207px;">
       <div style="position:absolute;left:13px;top:401px;width:933px;height:187px;overflow:hidden;">
         <p class="Slider-Heading P-1"><span class="C-1">Un analizador léxico o analizador lexicográfico es la primera fase de un compilador, consistente en un programa que recibe como entrada el código fuente de otro programa y produce una salida compuesta de tokens (componentes léxicos) o símbolos. Estos tokens sirven para una posterior etapa del proceso de traducción, siendo la entrada para el analizador sintáctico.</span></p>
       </div>
+      <img src="wpimages/wpaef635e8_06.png" alt="" width="470" height="68" style="position:absolute;left:0px;top:655px;width:470px;height:68px;">
+      <img src="wpimages/wp87123069_06.png" alt="" width="811" height="68" style="position:absolute;left:0px;top:1039px;width:811px;height:68px;">
+      <img src="wpimages/wp6d59edc0_06.png" alt="" width="494" height="68" style="position:absolute;left:0px;top:1447px;width:494px;height:68px;">
+      <img alt="" src="wpimages/wpa3fbd541_06.png" style="position:absolute;left:0px;top:737px;width:960px;height:232px;">
+      <div style="position:absolute;left:13px;top:737px;width:933px;height:232px;overflow:hidden;">
+        <p class="Slider-Heading P-1"><span class="C-1">Un lenguaje L es regular si y solo si se cumple al menos una de las siguientes condiciones:</span></p>
+        <ul style="list-style-type:disc;margin:0;padding:0;">
+          <li class="Slider-Heading P-2" style="text-indent:0;margin-left:48.0px;"><span class="C-1">&nbsp;L es infinito.</span></li><li class="Slider-Heading P-2" style="text-indent:0;margin-left:48.0px;"><span class="C-1">&nbsp;L s la unión o la concatenación de otros lenguajes regulares R1 y R2, L=R1 u R2 a L=R1 R2 respectivamente.</span></li><li class="Slider-Heading P-2" style="text-indent:0;margin-left:48.0px;"><span class="C-1">&nbsp;L es la cerradura de Kleene de algún lenguaje regular, L=R*.</span></li>
+        </ul>
+      </div>
+      <img alt="" src="wpimages/wp2f86e444_06.png" style="position:absolute;left:0px;top:1128px;width:960px;height:248px;"><div style="position:absolute;left:13px;top:1128px;width:933px;height:237px;overflow:hidden;"><p class="Slider-Heading P-1"><span class="C-1">Expresan patrones de cadena de caracteres.</span></p>
+        <p class="Slider-Heading P-1"><span class="C-1">Una expresión regular r se encuentra completamente definida mediante el conjunto de cadenas con las que concuerda. Este conjunto se denomina lenguaje <span class="C-2">generado por la expresión regular</span> y se escribe como L(r).</span></p>
+        <p class="Slider-Heading P-3"><span class="C-3">Ejemplo:</span></p>
+        <p class="Normal"><span class="C-3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="C-4"> <span class="C-5">Σ={a , b}</span></span></p>
+        <p class="Normal"><span class="C-6"><br></span></p>
+        <p class="Slider-Heading P-3"><span class="C-3"><br></span></p></div>
+      <img alt="" src="wpimages/wpc4a1e186_06.png" style="position:absolute;left:0px;top:1520px;width:960px;height:207px;">
+      <div style="position:absolute;left:10px;top:1530px;width:933px;height:187px;overflow:hidden;">
+        <p class="Slider-Heading P-1"><span class="C-1">Una gramática regular es un cuádruplo (V,Σ,R,S) en donde:</span></p>
+        <ul style="list-style-type:disc;margin:0;padding:0;">
+          <li class="Slider-Heading P-2" style="text-indent:0;margin-left:48.0px;"><span class="C-1">&nbsp;V es el alfabeto de variables.</span></li><li class="Slider-Heading P-2" style="text-indent:0;margin-left:48.0px;"><span class="C-1">&nbsp;Σ es el alfabeto de constantes.</span></li><li class="Slider-Heading P-2" style="text-indent:0;margin-left:48.0px;"><span class="C-1">&nbsp;Es el conjunto de reglas.</span></li><li class="Slider-Heading P-2" style="text-indent:0;margin-left:48.0px;"><span class="C-1">&nbsp;S es un símbolo inicial, es un elemento de V.</span></li>
+        </ul>
+      </div>
+      <img alt="" src="wpimages/wpadb56220_06.png" style="position:absolute;left:192px;top:1876px;width:605px;height:539px;"><div id="pg_9" style="position:absolute;left:191px;top:1889px;width:577px;height:456px;"><div id="wp_gallery_pg_9"></div></div><img src="wpimages/wp17d90d0e_06.png" alt="" width="261" height="68" style="position:absolute;left:350px;top:1788px;width:261px;height:68px;">
     </div>
   </body>
 </html>
