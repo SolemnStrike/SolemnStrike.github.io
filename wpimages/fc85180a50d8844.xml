@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<Slides>
+<slideNode jpegURL="e732bc1b5581.jpg" thumbURL="e732bc1b5581t.jpg" jpegWidth="544" jpegHeight="540"></slideNode>
+<slideNode jpegURL="91a4222ef243.jpg" thumbURL="91a4222ef243t.jpg" jpegWidth="458" jpegHeight="540"></slideNode>
+<slideNode jpegURL="35d35a149d44.jpg" thumbURL="35d35a149d44t.jpg" jpegWidth="500" jpegHeight="473"></slideNode>
+</Slides>
+<setup>
+	<infoNode 
+		sliderposxshift="true"
+		of=" of "
+		sec="sec"
+		PhotoWMax="800"
+		PhotoHMax="600"
+		captionx="400" 
+		captiony="480" 
+		mymusictrack = ""
+		thumbblocklength="3" 
+		fontcolor="0x000000"
+		sliderposx = "568"
+		sliderposy = "4"
+		slideimagein="false"
+		slidervis="true" 
+		verticalthumbs ="false" 
+		slideinimagenudge="false" 
+		thumbxLoc= "0"  
+		photoYLoc="-1" 
+		photoXLoc="0" 
+		thumbyLoc= "570" 
+		thumbsvis= "true" 
+		thumbsize= "50" 
+		thumbgap= "5"  
+		thumbygap= "0" 
+		blur="20" 
+		reflection="false" 
+		popslide="true"
+		popborder="true"
+		sliderdoc = "false"
+		AutoHideControls = "true"
+		Autoplay="false"
+		Sliderdefault="10"
+		>
+	</infoNode>
+</setup>
+ 
